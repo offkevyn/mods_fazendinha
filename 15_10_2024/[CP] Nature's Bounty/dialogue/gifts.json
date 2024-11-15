@@ -1,0 +1,410 @@
+{
+
+    "Changes": [		// in alphabetical order
+
+{			
+"Action": "EditData",
+"Target": "Characters/Dialogue/Abigail",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "@, como você sabia que eu estava com fome!?$h#$b#Brincadeira. Esse é o presente perfeito para mais tarde.",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ei, obrigada @! Algum dia eu vou aprender a bolar um baseado sozinha.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Ah, é que... Normalmente o Sebastian bola pra mim, então eu não sei se consigo usar isso.$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Yum, obrigada! Sabia que minha mãe ama isso?$h",
+},
+},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Alex",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Tô de boa, @. Um bom atleta como eu, já tem sua brisa natural.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Tô de boa, @. Um bom atleta como eu, já tem sua brisa natural.$0",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "O que você quer que eu faça com isso?$s",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "O que você quer que eu faça com isso?$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Brownies? Oba! Espera... o que é isso no meio deles?$s#$b#Eca, deixa pra lá...$a",
+},},
+
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Caroline",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Obrigada, @! a Abigail não sabe, mas as vezes eu entro escondida no quarto dela para pegar o cachimbo dela emprestado.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Que gentil da sua parte, @. Talvez eu consiga convencer a Jodi a usar comigo.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Ah... obrigada, @. Infelizmente eu não tenho o que fazer com isso.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Ah, @... você tá me mimando! Tão divinos! só perdem pro meu chá rsrs.$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Clint",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "É... Acho que eu poderia dar isso pra Emily.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "É... Acho que a Emily gosta disso, talvez seja um bom presente.$0",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "...Obrigado?$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Agradeço o presente, @, mas eu não gosto disso.$s",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "...Obrigado?$s",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Demetrius",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Ah, eu não preciso pesquisar mais sobre essa planta. Já confisquei várias do quarto do Sebastian.$3",
+  "AcceptGift_(O){{ModId}}_Preroll": "Vou ter que recusar, @. Porfavor não fique dando isso ao Sebastian.",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Vou ter que recusar, @.",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Sabe, a ciência por trás desses Brownies é bem interessante. Você tem que aquecer o THC para ativar- Ah, você tá me dando isso? Não, valeu.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Vou ter que recusar, @.",
+},},
+
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Dwarf",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Eu não sei pra que serve isso, mas eu aceito.",
+  "AcceptGift_(O){{ModId}}_Preroll": "Você fez isso, humano? Eu aceito.",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Você fez isso, humano? Não me parece muito útil, mas eu aprecio seus esforços. Vou aceitar.",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Tem um cheiro esquisito... mas eu aceito.",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Eu não tenho o que fazer com isso.",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Elliott",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Como eu poderia recusar? Obrigado por pensar em mim, @.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ah, @, tão precioso quanto uma joia. A gente deveria curtir juntos um dia!$l^Ah, @, tão preciosa quanto uma joia. A gente deveria curtir juntos um dia!$l",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Obrigado, @, eu tava precisando de um desse.$h",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Ficou delicioso! Aqui, vamos dividir um pedaço juntos.$l",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Seu gesto é gentil, @. Porém, eu não tenho cozinha na minha cabana... espero que não esteja caçoando de mim.$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Emily",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Você me trata tão bem, @! MUITO MUITO MUITO Obrigada!$h",
+  "AcceptGift_(O){{ModId}}_HempFiber": "Olha só! Sabia que as Fibras de Cânhamo fazem o MELHOR tecido? Obrigada @!$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ai sim, @! Bora acender?",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Eu nunca bolei um baseado sozinha... Mas eu aprecio o gesto.$l",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "A melhor sobremesa de todas! Tão nostálgico.$l",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Obrigada, vou aceitar um pouco disso.$3",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Evelyn",
+"Entries": {
+  "RejectItem_(O){{ModId}}_Bud": "Desculpa, querido(a), mas o George ficaria bravo se visse isso em casa.$s",
+  "RejectItem_(O){{ModId}}_Preroll": "Desculpa, querido(a), mas o George ficaria bravo se visse isso em casa.$s",
+  "RejectItem_(O){{ModId}}_HempRollingPaper": "Desculpa, querido(a), mas o George ficaria bravo se visse isso em casa.$s",
+  "RejectItem_(O){{ModId}}_SpecialBrownie": "Desculpa, querido(a), mas o George ficaria bravo se visse isso em casa.$s",
+  "RejectItem_(O){{ModId}}_InfusedOil": "Desculpa, querido(a), mas o George ficaria bravo se visse isso em casa.$s",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/George",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Nunca mais me dê algo parecido com isso.$a",
+  "AcceptGift_(O){{ModId}}_HempFiber": "Eu não ligo se não é a mesma coisa. Parece o alface do Diabo para mim!$a",
+  "AcceptGift_(O){{ModId}}_Preroll": "Eu tenho cara de Hippie pra você!?$a",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Porque eu iria querer isso?$a",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Parabéns, você destruiu um brownie perfeito. Que vergonha.$a",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Vocês jovens fazem de tudo para ficar chapado. Tira isso de perto de mim.$a",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "O que é isso? Feito de Cânhamo? Eu não quero nada que venha desta planta.$a",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Gus",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Obrigado, @. Vou usar para fazer Óleo Infusionado!$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ah, vou ter que recusar, @. Eu costumo cozinhar com esta planta, mas não como. Sabe como é né? Não use o que você vende.$0",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Desculpa, isso é inútil pra mim.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Ah, vou ter que recusar, @. Eu vendo brisownies, mas não como. Sabe como é né? Não coma o que você vende.$0",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Isso! quanto mais desses, mais brisownies pra vender. Obrigado, @.$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Haley",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Olha, eu não fumo. Isso fede, e eu gosto do meu cheiro incrível.$3",
+  "AcceptGift_(O){{ModId}}_Preroll": "Olha, eu não fumo. Isso fede, e eu gosto do meu cheiro incrível.$3",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Hum... isso é completamente inútil.$3",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Ah! isso parece bom. Obrigada, @.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Hum... isso é completamente inútil.$3",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Harvey",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Ah, não quero, @.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ah, não quero, @.$0",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Me perdoe, não tenho o que fazer com isso.$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Parece delicioso, mas vou ter que recusar.$0",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Me perdoe, não tenho o que fazer com isso.$s",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "Uau, @, eu amo isso! Elas diminuem a pressão sanguínea e o risco de doenças cardíacas. São incríveis!$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Jas",
+"Entries": {
+
+  "RejectItem_(O){{ModId}}_Bud": "Eca! Vou contar pro Shane.$s#$action AddFriendshipPoints Marnie -50 $action AddFriendshipPoints Shane -50",
+  "RejectItem_(O){{ModId}}_Preroll": "Eca! Vou contar pra Marnie.$s#$action AddFriendshipPoints Marnie -50 $action AddFriendshipPoints Shane -50",
+  "RejectItem_(O){{ModId}}_HempRollingPaper": "Pra que é isso? Vou contar pro Shane.$3#$action AddFriendshipPoints Marnie -50 $action AddFriendshipPoints Shane -50",
+  "RejectItem_(O){{ModId}}_SpecialBrownie": "Ooooh um brownie. Pera, isso não é pra crianças! Vou te dedurar!$s#$action AddFriendshipPoints Marnie -50 $action AddFriendshipPoints Shane -50",
+  "RejectItem_(O){{ModId}}_InfusedOil": "Pra que é isso? Vou contar pra Marnie.$3#$action AddFriendshipPoints Marnie -50 $action AddFriendshipPoints Shane -50",
+
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Jodi",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Desculpa, @, mas eu não quero usar isso.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ah... Eu normalmente só dou um trago ou dois quando a Caroline usa. Seria uma vergonha se o Vincent me visse com isso.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Desculpa @, eu não faço ideia do que fazer com isso.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Ah! Obrigada, @. Vou comer um pouco antes das aulas de aeróbico semana que vem.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Desculpa @, eu não faço ideia do que fazer com isso.$0",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Kent",
+"Entries": {
+
+  "AcceptGift_(O){{ModId}}_Bud": "Obrigado, @. Finalmente terei uma noite de sono calma.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Obrigado, @. Vou dormir muito bem hoje a noite.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Você tem bom gosto, Fazendeiro.",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Obrigado, @. Terei uma ótima noite hoje.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Desculpa @, não sei o que fazer com isso.",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Krobus",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Isso é inútil pra mim, mas cheira bem. Obrigado.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Você que fez esse aromatizante? Obrigado.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Isso é inútil pra mim. Obrigado.$h",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Eu sou fã do doce aroma do skunk.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Diga-me, o seu tipo bebe este liquído? Eu vou experimentar.$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Leah",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Você é muito gentil, @. O meu já estava acabando!$0",
+  "AcceptGift_(O){{ModId}}_HempFiber": "Sério, pra mim? eu amo Cânhamo. É tão versátil!$h",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "Ah, yum! São meus favoritos!$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Que generoso, @. Quer dar um trago comigo antes de ir?$l",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Obrigada @. Vou bolar um pra nós na próxima.$l",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Que cheiro maravilhoso, @. Vou cair de boca!$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Uau, obrigada! Vou ter que roubar a receita de brownie do Gus.$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Leo",
+"Entries": {
+
+  "RejectItem_(O){{ModId}}_Bud": "Huh? ...Não, valeu.$3",
+  "RejectItem_(O){{ModId}}_Preroll": "Huh? ...Não, valeu.$3",
+  "RejectItem_(O){{ModId}}_HempRollingPaper": "É isso que você usa pra construir seu ninho? Estranho.$3",
+  "RejectItem_(O){{ModId}}_SpecialBrownie": "Huh? ...Não, valeu.$3",
+  "RejectItem_(O){{ModId}}_InfusedOil": "Huh? ...Não, valeu.$3",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/LeoMainland",
+"Entries": {
+  "RejectItem_(O){{ModId}}_Preroll": "Huh? ...Willy disse que isso não é para crianças-papagaio.$3#$action AddFriendshipPoints Linus -50 $action AddFriendshipPoints Willy -50",
+  "RejectItem_(O){{ModId}}_Preroll": "Huh? ...Linus disse que isso não é para crianças-papagaio.$3#$action AddFriendshipPoints Linus -50 $action AddFriendshipPoints Willy -50",
+  "RejectItem_(O){{ModId}}_HempRollingPaper": "É isso que você usa pra construir seu ninho? Estranho.$3",
+  "RejectItem_(O){{ModId}}_SpecialBrownie": "Huh? ...Willy disse que isso não é para crianças-papagaio.$3#$action AddFriendshipPoints Linus -50 $action AddFriendshipPoints Willy -50",
+  "RejectItem_(O){{ModId}}_InfusedOil": "Huh? ...Linus disse que isso não é para crianças-papagaio.$action AddFriendshipPoints Linus -50 $action AddFriendshipPoints Willy -50",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Lewis",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Mas o que- Porque você acha que eu quero isso?$a",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "Obrigado, @. Eu deveria começar a comer refeições mais saudáveis.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Mas o que- Porque você acha que eu quero isso?$a",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Mas o que- Porque você acha que eu quero isso?$a",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Uma sobremesa clássica, arruinada... Não, obrigado.$s",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Mas o que- Porque você acha que eu quero isso?$a",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Linus",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Pra mim? Uau, obrigado @.$h",
+  "AcceptGift_(O){{ModId}}_HempFiber": "Ah eu amo Cânhamo. Tantos usos pra uma pequena semente.$0",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "Obrigado, @! Você não ama o quão versátil o Cânhamo é?$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Pra mim? Uau, obrigado @.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Quão útil. Obrigado @.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Obrigado, @. Eu amo um doce de vez em quando.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Eu aprecio o gesto, mas não tem muito o que eu fazer com isto na minha tenda.$s",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Marnie",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Fumar não é pra mim, sendo bem sincera.$s",
+  "AcceptGift_(O){{ModId}}_Preroll": "Fumar não é pra mim, sendo bem sincera.$s",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Não faço ideia do que fazer com isso.$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Isso me traz algumas memórias...$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Não faço ideia do que fazer com isso.$s",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Maru",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Acho que vou recusar, @.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Não, obrigado, @. Meu pai me mataria.$s",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Um... Desculpa, Eu não sei o que fazer com isso.$h",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Isso é um?... Claro, vou querer. Só não conta pro meu pai, tá?$0",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Um... Desculpa, Eu não sei o que fazer com isso.$h",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Pam",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Obrigada, jovem. Não é do meu costume, mas aceito.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Valeu jovem. Acende pra mim?$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Eu não uso essas coisas.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Obrigada, jovem. Não é do meu costume, mas aceito.$0",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Muito trabalho pra uma brisa se quer saber.$0",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Penny",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Ah! Um... não, obrigada.$s",
+  "AcceptGift_(O){{ModId}}_Preroll": "Eu prefiro não...$s",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Ah não, eu não tenho o que fazer com isso, @. Pode ficar.$3",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Nenhum pra mim, @.$3",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Ah não, eu não tenho o que fazer com isso, @. Pode ficar.$3",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Pierre",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Ugh... não quero, @.$3",
+  "AcceptGift_(O){{ModId}}_Preroll": "Ugh... não quero, @.$3",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Tá me dando lixo?$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Isso parece- Ah... esquece.$s",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Ugh... não quero, @.$3",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Robin",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Sendo honesta, não gosto muito disso.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Sendo honesta, não gosto muito disso.$0",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Sendo honesta, não gosto muito disso.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Ah, obrigada @. Já te contei da vez que eu dividi um com a Marnie?#$b#Tivemos uma ótima conversa com as vacas dela.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Sendo honesta, isso é meio inútil pra mim. Mas, o Gus ama isso, você deveria dar pra ele.$0",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Sam",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Daora! Quer me ver dar a maior bongada de todos os tempos?$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Maneiro! Você é manda bem demais, @.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Pra ser sincero, eu sou péssimo em bolar baseado.$4#$b#But Eu sou o campeão da bongada!$h",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "AI SIM, assim você vai me fazer chorar de alegria. Obrigado @.$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Uh... Sei lá o que eu faço com isso.$s",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "Eca... Desculpa @, eu não gosto disso.$s",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Sandy",
+"Entries": {  
+  "AcceptGift_(O){{ModId}}_Bud": "Uma das plantas mais finas do vale. Obrigado, @.$h",
+  "AcceptGift_(O){{ModId}}_HempFiber": "A planta de Cânhamo pode fazer tantas coisas. Amei o presente.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Você é um doce, @. Eu amo a planta do vale!$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Obrigada docinho de coco!$h",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Que encantador! E no tempo certo, já tava ficando entendiada aqui!$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Querida, eu não sei o que posso fazer com isso.$0",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Sebastian",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Coisas incríveis realmente vem em pacotes pequenos.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Você sabe mesmo como me deixar animado, @.$l",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Ai sim. Sempre posso usar mais disso.$h",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Quem pensou em combinar maconha com chocolate é meu herói pessoal.$7",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Pode ficar com isso, @. Eu nunca vou usar.$0",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Shane",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Ah, pra mim? Uau, obrigado @.$h",
+  "AcceptGift_(O){{ModId}}_Preroll": "Uau, obrigado. Eu precisava de algo pra desestressar.$3",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Eu não precisodisso. Muito trabalho.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Eita, isso parece ótimo. Obrigado, @.$4",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Isso é inútil pra mim.$2",
+  "AcceptGift_(O){{ModId}}_RoastedHempSeeds": "Eu prefiro comer lixo, @.$2",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Vincent",
+"Entries": {
+  "RejectItem_(O){{ModId}}_Bud": "Yuck! vou contar pro Sam!$s#$action AddFriendshipPoints Jodi -50 $action AddFriendshipPoints Sam -50 $action AddFriendshipPoints Kent -50",
+  "RejectItem_(O){{ModId}}_Preroll": "Yuck! vou contar pra minha mãe!$s#$action AddFriendshipPoints Jodi -50 $action AddFriendshipPoints Sam -50 $action AddFriendshipPoints Kent -50",
+  "RejectItem_(O){{ModId}}_HempRollingPaper": "Pra que serve isso? Eu vou contar pro Sam!$s#$action AddFriendshipPoints Jodi -50 $action AddFriendshipPoints Sam -50 $action AddFriendshipPoints Kent -50",
+  "RejectItem_(O){{ModId}}_SpecialBrownie": "Eu amo brownies! Espera... porque esse fede?$s#$action AddFriendshipPoints Jodi -50 $action AddFriendshipPoints Sam -50 $action AddFriendshipPoints Kent -50",
+  "RejectItem_(O){{ModId}}_InfusedOil": "Pra que serve isso? Eu vou contar pra minha mãe!$s#$action AddFriendshipPoints Jodi -50 $action AddFriendshipPoints Sam -50 $action AddFriendshipPoints Kent -50",
+
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Willy",
+"Entries": {  
+  "AcceptGift_(O){{ModId}}_Bud": "Que perfeito! Agradeço de coração, @.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Que gentil da sua parte, @.$h",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Meus dedos já não são tão ágeis como os seus, @. Acho que não consigo bolar mais.$s",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Mas que maravilha!$h",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Hmm... Acho que não tenho uso pra isso.$3",
+},},
+
+{
+"Action": "EditData",
+"Target": "Characters/Dialogue/Wizard",
+"Entries": {
+  "AcceptGift_(O){{ModId}}_Bud": "Uma pepita mais perfeita que ouro, eu diria. Você tem minha gratidão.$0",
+  "AcceptGift_(O){{ModId}}_Preroll": "Muito obrigado, @. Um dos melhores presentes do vale.$0",
+  "AcceptGift_(O){{ModId}}_HempRollingPaper": "Isso é muito útil pra mim, @. Obrigado.$0",
+  "AcceptGift_(O){{ModId}}_SpecialBrownie": "Muito obrigado, @. Eu adora essa mistura de indulgências.$0",
+  "AcceptGift_(O){{ModId}}_InfusedOil": "Acho que posso utilizar isso. Obrigado.$0",
+},},
+
+//end
+],
+}

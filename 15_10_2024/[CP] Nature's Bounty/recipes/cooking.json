@@ -1,0 +1,528 @@
+{
+
+    "Changes": [
+
+
+					// balanced - infused oil
+
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		            },  
+            "Entries": {
+                "{{ModId}}_InfusedOil": {
+                    "Name": "{{ModId}}_InfusedOil", // 
+                    "Displayname": "Óleo Infusionado",
+                    "Description": "Um ingrediente especial.",
+                    "Type": "Objects",
+                    "Category": -25,
+                    "Price": 175,
+                    "Texture": "{{InternalAssetKey: assets/InfusedOil.png}}",
+            				}
+        		},
+	},
+	{
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": { 
+		"Infused Oil": "{{ModId}}_Bud 5 247 1/5 5/{{ModId}}_InfusedOil 1/default" 
+			},
+        },
+        
+                    // low - infused oil
+                    
+       {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "low",
+		            },  
+            "Entries": {
+                "{{ModId}}_InfusedOil": {
+                    "Name": "{{ModId}}_InfusedOil", // 
+                    "Displayname": "Óleo Infusionado",
+                    "Description": "Um ingrediente especial.",
+                    "Type": "Objects",
+                    "Category": -25,
+                    "Price": 150,
+                    "Texture": "{{InternalAssetKey: assets/InfusedOil.png}}",
+            				}
+        		},
+	},
+      
+                    
+                    // high - infused oil
+                    
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "high",
+		            },  
+            "Entries": {
+                "{{ModId}}_InfusedOil": {
+                    "Name": "{{ModId}}_InfusedOil", // 
+                    "Displayname": "Óleo Infusionado",
+                    "Description": "Um ingrediente infusionado.",
+                    "Type": "Objects",
+                    "Category": -25,
+                    "Price": 350,
+                    "Texture": "{{InternalAssetKey: assets/InfusedOil.png}}",
+            				}
+        		},
+	},
+
+
+
+					// balanced - special brownies
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		            },
+            "TargetField": [ "Saloon", "Items" ],
+            "Entries": {
+                "{{ModId}}_SpecialBrownie": {
+                    "Id": "{{ModId}}_SpecialBrownie",
+                    "ItemId": "{{ModId}}_SpecialBrownie",
+                    "Price": 50,
+        		               	    }
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_SpecialBrownie", "ToPosition": "Top" }
+            		   ]
+        },
+
+
+		{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		            },
+            "Entries": {
+                "{{ModId}}_SpecialBrownie": {
+                    "Name": "{{ModId}}_SpecialBrownie", // 
+                    "Displayname": "Brisownie",
+                    "Description": "Uma sobremesa clássica com um ingrediente especial.",
+                    "Type": "Objects",
+                    "Category": -7,
+		    "Edibility": 16,
+		    "Buffs": 	[{
+      			"Id": "Stoned",
+        		"BuffId": "{{ModId}}_StonedBuff",
+
+				}],
+                    "Price": 25,
+                    "Texture": "{{InternalAssetKey: assets/SpecialBrownie.png}}",
+            					}
+        		},
+	},
+	{
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+    	    "When": {
+		        "Profit Margin": "balanced, high",
+		            },
+            "Entries": { 
+		"Special Brownie": "{{ModId}}_InfusedOil 1 245 1 -5 1/5 5/{{ModId}}_SpecialBrownie 10/default" 
+			},
+        },
+
+
+					// low - special brownies
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		            },
+            "TargetField": [ "Saloon", "Items" ],
+            "Entries": {
+                "{{ModId}}_SpecialBrownie": {
+                    "Id": "{{ModId}}_SpecialBrownie",
+                    "ItemId": "{{ModId}}_SpecialBrownie",
+                    "Price": 50,
+        		               	    }
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_SpecialBrownie", "ToPosition": "Top" }
+            		   ]
+        },
+
+
+	{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "low",
+		            },
+            "Entries": {
+                "{{ModId}}_SpecialBrownie": {
+                    "Name": "{{ModId}}_SpecialBrownie", // 
+                    "Displayname": "Brisownie",
+                    "Description": "Uma sobremesa clássica com um ingrediente especial.",
+                    "Type": "Objects",
+                    "Category": -7,
+		    "Edibility": 16,
+		    "Buffs": 	[{
+      			"Id": "Stoned",
+        		"BuffId": "{{ModId}}_StonedBuff",
+				}],
+                    "Price": 20,
+                    "Texture": "{{InternalAssetKey: assets/SpecialBrownie.png}}",
+            					}
+        		},
+	},
+
+	{
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+    	    "When": {
+		        "Profit Margin": "low",
+		            },
+            "Entries": { 
+		"Special Brownie": "{{ModId}}_InfusedOil 1 245 1 -5 1/5 5/{{ModId}}_SpecialBrownie 5/default" 
+			},
+        },
+
+
+
+					// high - special brownies
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+    	    "When": {
+		        "Profit Margin": "high",
+		            },
+            "TargetField": [ "Saloon", "Items" ],
+            "Entries": {
+                "{{ModId}}_SpecialBrownie": {
+                    "Id": "{{ModId}}_SpecialBrownie",
+                    "ItemId": "{{ModId}}_SpecialBrownie",
+                    "Price": 100,
+        		               	    }
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_SpecialBrownie", "ToPosition": "Top" }
+            		   ]
+        },
+
+
+
+
+	{
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "high",
+		            },
+            "Entries": {
+                "{{ModId}}_SpecialBrownie": {
+                    "Name": "{{ModId}}_SpecialBrownie", // 
+                    "Displayname": "Brisownie",
+                    "Description": "Uma sobremesa clássica com um ingrediente especial.",
+                    "Type": "Objects",
+                    "Category": -7,
+		    "Edibility": 16,
+		    "Buffs": 	[{
+      			"Id": "Stoned",
+        		"BuffId": "{{ModId}}_StonedBuff",
+				}],
+                    "Price": 50,
+                    "Texture": "{{InternalAssetKey: assets/SpecialBrownie.png}}",
+            					}
+        		},
+	},
+
+
+
+	{
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_StonedBuff": {
+                    	"Displayname": "Chapado",
+                    	"Description": null,
+        		"IconTexture": "{{InternalAssetKey: assets/StonedBuff.png}}",
+        		"IconSpriteIndex": 0,
+		        "Duration": 84000,
+		        "IsDebuff": false,
+	        	"GlowColor": null,
+        		"CustomAttributes": {},
+		        "CustomFields": null,
+            				},
+        		},
+	}, 
+
+
+					// balanced - roasted hemp seeds
+        
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		            },
+            "Entries": {
+                "{{ModId}}_RoastedHempSeeds": {
+                    "Name": "{{ModId}}_RoastedHempSeeds", // 
+                    "Displayname": "Sementes de Cânhamo Tostado",
+                    "Description": "Tá cheio de nutrientes.",
+                    "Type": "Objects",
+                    "Category": -7,
+		            "Edibility": 50,
+                    "Price": 250,
+                    "Texture": "{{InternalAssetKey: assets/RoastedHempSeeds.png}}",
+            					}
+        		},
+	},
+	{
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": { 
+		"Roasted Hemp Seeds": "{{ModId}}_HempSeeds 3/5 5/{{ModId}}_RoastedHempSeeds 1/default" },
+        },
+
+					// low - roasted hemp seeds
+        
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "low",
+		            },
+            "Entries": {
+                "{{ModId}}_RoastedHempSeeds": {
+                    "Name": "{{ModId}}_RoastedHempSeeds", // 
+                    "Displayname": "Sementes de Cânhamo Tostado",
+                    "Description": "Tá cheio de nutrientes.",
+                    "Type": "Objects",
+                    "Category": -7,
+		            "Edibility": 50,
+                    "Price": 225,
+                    "Texture": "{{InternalAssetKey: assets/RoastedHempSeeds.png}}",
+            					}
+        		},
+	},
+
+					// high - roasted hemp seeds
+        
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "high",
+		            },
+            "Entries": {
+                "{{ModId}}_RoastedHempSeeds": {
+                    "Name": "{{ModId}}_RoastedHempSeeds", // 
+                    "Displayname": "Sementes de Cânhamo Tostado",
+                    "Description": "Tá cheio de nutrientes.",
+                    "Type": "Objects",
+                    "Category": -7,
+		            "Edibility": 50,
+                    "Price": 400,
+                    "Texture": "{{InternalAssetKey: assets/RoastedHempSeeds.png}}",
+            					}
+        		},
+	},
+
+					// gift tastes
+
+{
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                { 			// universal dislike
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Dislike"],
+                    "Value": "{{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+		{ 			// universal like
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Like"],
+                    "Value": "{{ModId}}_RoastedHempSeeds {{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leah", "1"],
+                    "Value": "{{ModId}}_RoastedHempSeeds",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Harvey", "1"],
+                    "Value": "{{ModId}}_RoastedHempSeeds",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Gus", "1"],
+                    "Value": "{{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Caroline", "1"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", "1"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leah", "3"],
+                    "Value": "{{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Dwarf", "5"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Krobus", "5"],
+                    "Value": "{{ModId}}_SpecialBrownie {{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+		{
+                    "Operation": "Append",
+                    "Target": ["Fields", "Wizard", "5"],
+                    "Value": "{{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", "5"],
+                    "Value": "{{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "George", "7"],
+                    "Value": "{{ModId}}_RoastedHempSeeds",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sam", "7"],
+                    "Value": "{{ModId}}_RoastedHempSeeds",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Shane", "7"],
+                    "Value": "{{ModId}}_RoastedHempSeeds",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Alex", "7"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Clint", "7"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Evelyn", "7"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Harvey", "7"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Lewis", "7"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Pierre", "7"],
+                    "Value": "{{ModId}}_SpecialBrownie",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "George", "9"],
+                    "Value": "{{ModId}}_SpecialBrownie {{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Penny", "9"],
+                    "Value": "{{ModId}}_SpecialBrownie {{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jas", "9"],
+                    "Value": "{{ModId}}_SpecialBrownie {{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Vincent", "9"],
+                    "Value": "{{ModId}}_SpecialBrownie {{ModId}}_InfusedOil {{ModId}}_RoastedHempSeeds",
+                    "Delimiter": " " 
+                },
+
+
+
+]
+}
+
+    ]
+}

@@ -1,0 +1,10 @@
+{
+   "Name": "Nature's Bounty",
+   "Author": "raspb3rryfields",
+   "Version": "1.0.3",
+   "Description": "Introduces cannabis to the Valley.",
+   "UniqueID": "Raspb3rryfields.NaturesBounty",
+   "MinimumApiVersion": "4.0.7",
+   "UpdateKeys": ["Nexus:20583"],
+   "ContentPackFor": { "UniqueID": "Pathoschild.ContentPatcher" },
+}

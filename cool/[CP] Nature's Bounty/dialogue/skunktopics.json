@@ -1,0 +1,86 @@
+{
+
+    "Changes": [		
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Abigail",
+"Entries": {
+	"PrerollAbigail": "Meu pai não para de falar sobre você fumando na loja. Ele tá muito bravo!$h",
+	"SkunkBuffAbigail": "Meu pai te chutou pra fora, hein?$h#$b#Ele odeia quando eu chego cheirando a maconha, aparentemente é 'ruim para os negócios'.",
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Caroline",
+"Entries": {
+	"PrerollCaroline": "Olá, @... Pierre me contou sobre o seu pequeno incidente.#$b#Não, não estou brava. Só, faça isso do lado de fora da próxima vez, tá?",
+	"SkunkBuffCaroline": "Meu marido é um pouco drámatico as vezes...$h#$b#Desculpa por ele ter te chutado pra fora assim.",	
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Harvey",
+"Entries": {
+	"PrerollHarvey": "...Oi, @. Desculpa por ter perdido a paciência.#$b#Porfavor não faça isso denovo.",
+	"SkunkBuffHarvey": "Bom te ver denovo, @.#$b#Não, não to brava. Eu não tenho nada contra o uso de marijuana, Eu só não quero que meus pacientes fiquem desconfortáveis. Obrigado por entender.",
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Lewis",
+"Entries": {
+	"PrerollLewis": "Marnie me disse que você fumou na loja dela, @. Espero que você a trate com um pouco mais de respeito agora.$s",
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Marnie",
+"Entries": {
+	"PrerollMarnie": "...Oi.#$b#Sim, ainda estou chateada. Foi bem rude da sua parte, @.$s",
+	"SkunkBuffMarnie": "Ah, olá @. Me perdoe, ainda estou um pouco chateada.$s",	
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Maru",
+"Entries": {
+	"PrerollMaru": "Eu nunca vi o Harvey tão bravo... Espero que você tenha se desculpado, @.$s",
+	"SkunkBuffMaru": "Ah, ei... desculpa @, Eu tive que sair de lá. Foi tão constrangedor!$s",	
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Penny",
+"Entries": {
+	"PrerollPenny": "Oh, oi, @... Só estou um pouco chateada que você fez isso na biblioteca, só isso.$s",
+	"SkunkBuffPenny": "Oi... Desculpa se fui rude. É que eu me preocupo com as crianças.$s",	
+	},
+},
+
+{
+
+"Action": "EditData",
+"Target": "Characters/Dialogue/Pierre",
+"Entries": {
+	"PrerollPierre": "Ah, olá @. Espero que não esteja pensando em fazer aquilo denovo.$3",
+	"SkunkBuffPierre": "Olha quem é. Vê se não faz mais aquilo, beleza?$3",	
+	},
+},
+
+//end
+]
+}

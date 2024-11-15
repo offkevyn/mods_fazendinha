@@ -1,0 +1,288 @@
+{
+
+    "Changes": [
+
+					// balanced & low - seeds
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "When": {
+	            "Profit Margin": "balanced, low",
+		            },
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Name": "{{ModId}}_HempSeeds", // 
+                    "Displayname": "Sementes de Cânhamo",
+                    "Description": "Pode ser plantado em qualquer estação exceto no Inverno. Leva 7 dias para crescer e irá produzir toda semana. Produz 3 fibras por colheita.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 20,
+                    "Texture": "{{InternalAssetKey: assets/HempSeeds.png}}",
+            				}
+        		},
+	},
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Dwarf", "Items" ],
+	        "When": { 
+	            "DayofWeek": "Monday",
+	            "Profit Margin": "balanced, low"
+	                    },
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Id": "{{ModId}}_HempSeeds",
+                    "ItemId": "{{ModId}}_HempSeeds",
+		    "AvailableStock": 10,
+                    "Price": 60,
+        		               	    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_HempSeeds", "ToPosition": "Top" }
+            		   ]
+        },
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {
+	            "Profit Margin": "balanced, low",
+		            },  
+            "TargetField": [ "SeedShop", "Items" ],
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Id": "{{ModId}}_HempSeeds",
+                    "ItemId": "{{ModId}}_HempSeeds",
+                    "Price": 35
+           	       			    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_HempSeeds", "ToPosition": "Top" }
+            		   ]
+        },
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {
+        	    "Profit Margin": "balanced, low",
+		             },
+            "TargetField": [ "Sandy", "Items" ],
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Id": "{{ModId}}_HempSeeds",
+                    "ItemId": "{{ModId}}_HempSeeds",
+                    "Price": 60
+           	       			    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_HempSeeds", "ToPosition": "Top" }
+            		   ]
+        },
+        
+					// high - seeds
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "When": {
+	            "Profit Margin": "high",
+		            },
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Name": "{{ModId}}_HempSeeds", // 
+                    "Displayname": "Sementes de Cânhamo",
+                    "Description": "Pode ser plantado em qualquer estação exceto no Inverno. Leva 7 dias para crescer e irá produzir toda semana. Produz 3 fibras por colheita.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 50,
+                    "Texture": "{{InternalAssetKey: assets/HempSeeds.png}}",
+            				}
+        		},
+	},
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "Dwarf", "Items" ],
+	        "When": { 
+	            "DayofWeek": "Monday",
+	            "Profit Margin": "high"
+	                    },
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Id": "{{ModId}}_HempSeeds",
+                    "ItemId": "{{ModId}}_HempSeeds",
+		    "AvailableStock": 10,
+                    "Price": 100,
+        		               	    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_HempSeeds", "ToPosition": "Top" }
+            		   ]
+        },
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {
+	            "Profit Margin": "high",
+		            },  
+            "TargetField": [ "SeedShop", "Items" ],
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Id": "{{ModId}}_HempSeeds",
+                    "ItemId": "{{ModId}}_HempSeeds",
+                    "Price": 55
+           	       			    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_HempSeeds", "ToPosition": "Top" }
+            		   ]
+        },
+	{
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "When": {
+        	    "Profit Margin": "high",
+		             },
+            "TargetField": [ "Sandy", "Items" ],
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Id": "{{ModId}}_HempSeeds",
+                    "ItemId": "{{ModId}}_HempSeeds",
+                    "Price": 100
+           	       			    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_HempSeeds", "ToPosition": "Top" }
+            		   ]
+        },
+        
+        
+        
+        				// balanced - crop
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		        },
+            "Entries": {
+                "{{ModId}}_HempFiber": {
+                    "Name": "{{ModId}}_HempFiber", // 
+                    "Displayname": "Fibra de Cânhamo",
+                    "Description": "É tão versátil!",
+                    "Type": "Objects",
+                    "Category": -80,
+                    "Price": 40,
+                    "Texture": "{{InternalAssetKey: assets/HempFiber.png}}",
+            				}
+        		},
+	},
+        {
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "{{ModId}}_HempSeeds": {
+                    "Seasons": [ "spring", "summer", "fall" ],
+                    "DaysInPhase": [ 1, 1, 1, 2, 2 ],
+		    "RegrowDays": 7,
+                    "HarvestItemId": "{{ModId}}_HempFiber",
+                    "HarvestMinStack": 3,
+                    "HarvestMaxStack": 3,
+                    "Texture": "{{InternalAssetKey: assets/Hemp.png}}",
+            			}
+			},
+        },
+
+        				// low - crop
+
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "low",
+		                },
+            "Entries": {
+                "{{ModId}}_HempFiber": {
+                    "Name": "{{ModId}}_HempFiber", // 
+                    "Displayname": "Fibra de Cânhamo",
+                    "Description": "É tão versátil!",
+                    "Type": "Objects",
+                    "Category": -80,
+                    "Price": 30,
+                    "Texture": "{{InternalAssetKey: assets/HempFiber.png}}",
+            				}
+        		},
+	},
+	
+	                // high - crop
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "high",
+		        },
+            "Entries": {
+                "{{ModId}}_HempFiber": {
+                    "Name": "{{ModId}}_HempFiber", // 
+                    "Displayname": "Fibra de Cânhamo",
+                    "Description": "É tão versátil!",
+                    "Type": "Objects",
+                    "Category": -80,
+                    "Price": 75,
+                    "Texture": "{{InternalAssetKey: assets/HempFiber.png}}",
+            				}
+        		},
+	},
+
+
+					// gift tastes
+
+	{
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                { 			// universal dislike
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Dislike"],
+                    "Value": "{{ModId}}_HempSeeds",
+                    "Delimiter": " " 
+                },
+                
+                { 			// universal neutral
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Neutral"],
+                    "Value": "{{ModId}}_HempFiber",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", "3"],
+                    "Value": "{{ModId}}_HempFiber",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leah", "3"],
+                    "Value": "{{ModId}}_HempFiber",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Linus", "3"],
+                    "Value": "{{ModId}}_HempFiber",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sandy", "3"],
+                    "Value": "{{ModId}}_HempFiber",
+                    "Delimiter": " " 
+                },
+
+]},
+
+    ]
+}

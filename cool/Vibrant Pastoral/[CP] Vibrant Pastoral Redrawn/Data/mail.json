@@ -1,0 +1,33 @@
+{
+	"Changes": [
+		//Mail
+		{
+			"Action": "EditData",
+			"Target": "Data/Mail",
+			"Entries": {
+				"EdNygma_Intro": "{{i18n:mail.EdNygma_Intro.content}}[letterbg Mods/{{ModId}}/letterBGextra 0][textcolor green][#]Ed Nygma Intro",
+				"EdNygma_1": "{{i18n:mail.EdNygma_1.content}}[letterbg Mods/{{ModId}}/letterBGextra 0][textcolor green][#]Ed Nygma #1"
+			}
+		},
+		//Letter BG Extra
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/letterBGextra",
+            "FromFile": "Assets/LooseSprites/letterBGextra.png",
+			"Priority": "Low"
+        },
+		//Mail Event
+		{
+			"Action": "EditData",
+			"Target": "Data/Events/Farm",
+            "When": {
+				"IsCommunityCenterComplete": true,
+				"Buildings |contains=town": true
+			},
+			"Entries": {
+				"15564001/z winter/k 15564002/l EdNygma_Intro/x EdNygma_Intro": "null",
+				"15564002/z spring/z summer/z fall/l EdNygma_1/x EdNygma_1": "null"
+			}
+		}
+	]
+}

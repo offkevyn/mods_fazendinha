@@ -1,0 +1,508 @@
+{
+
+    "Changes": [		
+					// seed shop skunk buff events
+{			
+"Action": "EditData",
+"Target": "Data/Events/SeedShop",
+"Entries": {	
+
+"2058301/n SeedShopSkunk": "shaneTheme/-100 -100/farmer 6 29 0 Pierre 4 17 2/unskippable/addConversationTopic SkunkBuffPierre/addConversationTopic SkunkBuffAbigail/addConversationTopic SkunkBuffCaroline/viewport 6 21/speed farmer 2/move farmer 0 -5 0 true/jump Pierre/emote Pierre 12/speed Pierre 5/move Pierre -2 0 2 true/emote farmer 8/speed Pierre 5/move Pierre 0 6 1/speed Pierre 5/move Pierre 2 0 1 true/faceDirection farmer 3/speak Pierre \"O que você tá fazendo!?$3\"/jump farmer 5/shake Pierre 20000/pause 1000/speak Pierre \"Não dê mais nenhum passo! Esse fedor vai impregnar meus produtos tão bem cuidados e de alta qualidade!$3\"/pause 500/speak Pierre \"Meus clientes merecem uma loja limpa e sem drogas! Você tem que sair, @.$3\"/pause 400/emote farmer 28/faceDirection farmer 2/pause 30/move farmer 0 5 2 true/globalFade/viewport -1000 -1000/message \"Não pense em voltar até que esse fedor passe.\"/friendship Pierre -250/end warpOut",
+
+"2058302/n SeedShopSkunk1/e 2058301 2058304": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Você não pode voltar com esse fedor.\"/end warpOut/forgetEvent 2058303",
+
+"2058303/n SeedShopSkunk1/e 2058301 2058304": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Você não pode voltar com esse fedor.\"/end warpOut/forgetEvent 2058302",
+
+"2058304/n SeedShopSkunk2": "none/-100 -100/farmer -1000 -1000 0/unskippable/speak Pierre \"Como você OUSA fumar dentro da minha loja! Dá o fora, @!$3\"/friendship Pierre -250/addConversationTopic PrerollPierre/addConversationTopic PrerollAbigail/addConversationTopic PrerollCaroline/end warpOut/forgetMail SeedShopSkunk",
+
+
+},
+},
+			
+{	// trigger initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffSeedShop": {
+		"Id": "{{ModId}}_SkunkBuffSeedShop",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current SeedShopSkunk received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffSeedShop5 false",
+                    ]
+                }
+            },
+},
+
+{	// remove trigger for initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffSeedShop5": {
+		"Id": "{{ModId}}_SkunkBuffSeedShop5",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current SeedShopSkunk",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffSeedShop false",
+                    ]
+                }
+            },
+},
+
+{	// trigger temp ban
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffSeedShop1": {
+		"Id": "{{ModId}}_SkunkBuffSeedShop1",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current SeedShopSkunk1 received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffSeedShop2 false",
+                    ],
+        
+                }
+            },
+},
+{	// trigger temp ban loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffSeedShop2": {
+		"Id": "{{ModId}}_SkunkBuffSeedShop2",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current SeedShopSkunk1",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffSeedShop1 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop kick
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffSeedShop3": {
+		"Id": "{{ModId}}_SkunkBuffSeedShop3",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here SeedShop",
+		"Actions": [
+			"AddMail Current SeedShopSkunk2 received",
+			"spacechase0.SpaceCore_PlayEvent 2058304 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffSeedShop4 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffSeedShop4": {
+		"Id": "{{ModId}}_SkunkBuffSeedShop4",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here SeedShop",
+		"Actions": [
+			"RemoveMail Current SeedShopSkunk2",
+			"spacechase0.SpaceCore_PlayEvent 2058304 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffSeedShop3 false",
+                    ],
+                }
+            },
+},
+
+{
+"Action": "EditData",
+"Target": "Data/Mail",
+"Entries":
+	{
+	"SeedShopSkunk": null,
+	"SeedShopSkunk1": null,
+	"SeedShopSkunk2": null,
+    },
+},
+
+
+
+{			
+"Action": "EditData",
+"Target": "Data/Events/Hospital",
+"Entries": {	
+
+"2058305/n HospitalSkunk": "shaneTheme/-100 -100/farmer 10 19 0 Harvey 9 15 3 Maru 6 15 1/unskippable/friendship Harvey -250/addConversationTopic SkunkBuffHarvey/addConversationTopic SkunkBuffMaru/viewport 10 14/speed farmer 2/move farmer 0 -1 0 true/faceDirection Harvey 2/faceDirection Maru 2/jump Harvey/jump Maru/emote Harvey 16 true/emote Maru 16 true/pause 1000/speak Harvey \"@, o que você tá fazendo?$a\"/emote Maru 28/faceDirection Maru 3/speed Maru 4/move Maru -1 0 0/speed Maru 4/move Maru 0 -1 0/doAction 5 13/speed Maru 4/move Maru 0 -4 0/emote Harvey 12 true/doAction 5 9/speed Maru 4/move Maru 0 -4 2 true/speak Harvey \"E se um paciente estivesse aqui? Isso é inaceitável.$s\"/pause 500/speak Harvey \"Porfavor, saia.$s\"/pause 400/emote farmer 28/faceDirection farmer 1/pause 20/faceDirection farmer 2/pause 20/move farmer 0 1 2 true/playSound doorOpen/pause 30/warp farmer -1000 -1000/playSound doorClose true/globalFade/viewport -100 -100/message \"Você não pode voltar com esse fedor.\"/end warpOut",
+
+"2058306/n HospitalSkunk1/e 2058305 2058308": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Volte apenas quando esse cheiro passar.\"/end warpOut/forgetEvent 2058307",
+
+"2058307/n HospitalSkunk1/e 2058305 2058308": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Volte apenas quando esse cheiro passar.\"/end warpOut/forgetEvent 2058306",
+
+"2058308/n HospitalSkunk2": "none/-100 -100/farmer -1000 -1000 0/unskippable/friendship Harvey -250/addConversationTopic PrerollHarvey/addConversationTopic PrerollMaru/speak Harvey \"Você só pode tá brincando, @. No meio de uma clínica!? Inaceitável.$a\"/end warpOut",
+
+
+},
+},
+			
+{	// trigger initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffHospital": {
+		"Id": "{{ModId}}_SkunkBuffHospital",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current HospitalSkunk received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffHospital5 false",
+                    ]
+                }
+            },
+},
+
+{	// remove trigger for initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffHospital5": {
+		"Id": "{{ModId}}_SkunkBuffHospital5",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current HospitalSkunk",			
+			"MarkActionApplied Current {{ModId}}_SkunkBuffHospital false",
+                    ]
+                }
+            },
+},
+
+{	// trigger temp ban
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffHospital1": {
+		"Id": "{{ModId}}_SkunkBuffHospital1",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current HospitalSkunk1 received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffHospital2 false",
+                    ],
+        
+                }
+            },
+},
+{	// trigger temp ban loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffHospital2": {
+		"Id": "{{ModId}}_SkunkBuffHospital2",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current HospitalSkunk1",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffHospital1 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop kick
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffHospital3": {
+		"Id": "{{ModId}}_SkunkBuffHospital3",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here Hospital",
+		"Actions": [
+			"AddMail Current HospitalSkunk2 received",
+			"spacechase0.SpaceCore_PlayEvent 2058308 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffHospital4 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffHospital4": {
+		"Id": "{{ModId}}_SkunkBuffHospital4",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here Hospital",
+		"Actions": [
+			"RemoveMail Current HospitalSkunk2",
+			"spacechase0.SpaceCore_PlayEvent 2058308 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffHospital3 false",
+                    ],
+                }
+            },
+},
+
+{
+"Action": "EditData",
+"Target": "Data/Mail",
+"Entries":
+	{
+	"HospitalSkunk": null,
+	"HospitalSkunk1": null,
+	"HospitalSkunk2": null,
+    },
+},
+
+
+					// marnie's ranch skunk buff events
+{			
+"Action": "EditData",
+"Target": "Data/Events/AnimalShop",
+"Entries": {	
+
+"2058309/n RanchSkunk": "shaneTheme/-100 -100/farmer 13 19 0 Marnie 12 14 2 Jas 11 17 1/unskippable/friendship Marnie -250/addConversationTopic SkunkBuffMarnie/viewport 13 17 true/speed farmer 2/move farmer 0 -2 0 true/pause 30/jump Marnie/emote Marnie 16 true/emote Jas 8/speak Marnie \"Jas, vai pro seu quarto.$3\"/emote Jas 12/speed Jas 3/move Jas 0 1 3/speed Jas 3/move Jas -3 0 0/speed Jas 3/move Jas 0 -1 3/speed Jas 3/move Jas -2 0 0/speed Jas 3/move Jas 0 -4 0/doAction 6 12/removeTile 6 12 Buildings/removeTile 6 11 Front/move Jas 0 -6 3 true/speak Marnie \"É muito rude da sua parte entrar na loja de uma pessoa com este fedor, @.$3\"/pause 400/speak Marnie \"Especialmente com uma CRIANÇA morando aqui! Estou tão desapontada...$s\"/pause 100/emote farmer 28/faceDirection farmer 1/pause 10/faceDirection farmer 2/pause 10/move farmer 0 2 2/playSound doorOpen/pause 30/warp farmer -1000 -1000/playSound doorClose true/globalFade/viewport -100 -100/message \"Você não pode voltar até o cheiro passar.\"/end warpOut",
+
+"2058310/n RanchSkunk1/e 2058309 2058312": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Você não pode voltar até o cheiro passar.\"/end warpOut/forgetEvent 2058311",
+
+"2058311/n RanchSkunk1/e 2058309 2058312": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Você não pode voltar até o cheiro passar.\"/end warpOut/forgetEvent 2058310",
+
+"2058312/n RanchSkunk2": "none/-100 -100/farmer -1000 -1000 0/unskippable/friendship Marnie -250/addConversationTopic PrerollMarnie/addConversationTopic PrerollLewis/speak Marnie \"Que desrespeito, @! Eu vou chamar o Lew- ...Prefeito Lewis!$s\"/end warpOut",
+},
+},
+			
+{	// trigger initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffRanch": {
+		"Id": "{{ModId}}_SkunkBuffRanch",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current RanchSkunk received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffRanch5 false",
+                    ]
+                }
+            },
+},
+
+{	// remove trigger for initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffRanch5": {
+		"Id": "{{ModId}}_SkunkBuffRanch5",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current RanchSkunk",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffRanch false",
+                    ]
+                }
+            },
+},
+
+{	// trigger temp ban
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffRanch1": {
+		"Id": "{{ModId}}_SkunkBuffRanch1",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current RanchSkunk1 received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffRanch2 false",
+                    ],
+        
+                }
+            },
+},
+{	// trigger temp ban loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffRanch2": {
+		"Id": "{{ModId}}_SkunkBuffRanch2",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current RanchSkunk1",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffRanch1 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop kick
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffRanch3": {
+		"Id": "{{ModId}}_SkunkBuffRanch3",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here AnimalShop",
+		"Actions": [
+			"AddMail Current RanchSkunk2 received",
+			"spacechase0.SpaceCore_PlayEvent 2058312 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffRanch4 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffRanch4": {
+		"Id": "{{ModId}}_SkunkBuffRanch4",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here AnimalShop",
+		"Actions": [
+			"RemoveMail Current RanchSkunk2",
+			"spacechase0.SpaceCore_PlayEvent 2058312 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffRanch3 false",
+                    ],
+                }
+            },
+},
+	// mail tags
+{
+"Action": "EditData",
+"Target": "Data/Mail",
+"Entries":
+	{
+	"RanchSkunk": null,
+	"RanchSkunk1": null,
+	"RanchSkunk2": null,
+    },
+},
+
+
+
+					// museum skunk buff events
+{			
+"Action": "EditData",
+"Target": "Data/Events/ArchaeologyHouse",
+"Entries": {	
+
+"2058313/n MuseumSkunk": "shaneTheme/-100 -100/farmer 3 14 0 Gunther 5 10 0 Penny 8 12 1/unskippable/friendship Penny -250/addConversationTopic SkunkBuffPenny/viewport 4 11/playSound doorClose/pause 500/speed farmer 1/move farmer 0 -2 0/faceDirection Penny 3 true/faceDirection Gunther 2/jump Penny 5/jump Gunther 5/emote Penny 16 true/emote Gunther 16 true/pause 1500/speak Gunther \"Espere ai, @.\"/emote Penny 28 true/pause 1500/speak Gunther \"Me desculpe, mas você não pode entrar aqui com esse fedor.\"/pause 1000/faceDirection farmer 1 true/speak Penny \"As crianças estudam aqui, @...$s\"/pause 500/emote farmer 28/faceDirection farmer 2/pause 50/move farmer 0 2 2/playSound doorOpen/pause 30/warp farmer -1000 -1000/playSound doorClose true/globalFade/viewport -100 -100/message \"Você não pode voltar até o cheiro passar.\"/end warpOut",
+
+"2058314/n MuseumSkunk1/e 2058313 2058316": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Você não pode voltar até o cheiro passar.\"/end warpOut/forgetEvent 2058315",
+
+"2058315/n MuseumSkunk1/e 2058313 2058316": "none/-100 -100/farmer -100 -100 0/unskippable/message \"Você não pode voltar até o cheiro passar.\"/end warpOut/forgetEvent 2058314",
+
+"2058316/n MuseumSkunk2": "none/-100 -100/farmer -1000 -1000 0/unskippable/friendship Penny -250/addConversationTopic PrerollPenny/speak Gunther \"Você tem culhões, @. Saia. Agora.\"/end warpOut",
+
+},
+},
+
+			
+{	// trigger initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffMuseum": {
+		"Id": "{{ModId}}_SkunkBuffMuseum",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current MuseumSkunk received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffMuseum5 false",
+                    ]
+                }
+            },
+},
+
+{	// remove trigger for initial event
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffMuseum5": {
+		"Id": "{{ModId}}_SkunkBuffMuseum5",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current MuseumSkunk",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffMuseum false",
+                    ]
+                }
+            },
+},
+
+{	// trigger temp ban
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffMuseum1": {
+		"Id": "{{ModId}}_SkunkBuffMuseum1",
+		"Trigger": "LocationChanged",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"AddMail Current MuseumSkunk1 received",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffMuseum2 false",
+                    ],
+        
+                }
+            },
+},
+{	// trigger temp ban loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffMuseum2": {
+		"Id": "{{ModId}}_SkunkBuffMuseum2",
+		"Trigger": "LocationChanged",
+		"Condition": "!PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff",
+		"Actions": [
+			"RemoveMail Current MuseumSkunk1",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffMuseum1 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop kick
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffMuseum3": {
+		"Id": "{{ModId}}_SkunkBuffMuseum3",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here ArchaeologyHouse",
+		"Actions": [
+			"AddMail Current MuseumSkunk2 received",
+			"spacechase0.SpaceCore_PlayEvent 2058316 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffMuseum4 false",
+                    ],
+                }
+            },
+},
+{	// trigger use in shop loop
+"Action": "EditData",
+"Target": "Data/TriggerActions",
+"Entries": {
+	"{{ModId}}_SkunkBuffMuseum4": {
+		"Id": "{{ModId}}_SkunkBuffMuseum4",
+		"Trigger": "spacechase0.SpaceCore_OnItemEaten",
+		"Condition": "PLAYER_HAS_BUFF Current {{ModId}}_SkunkBuff, LOCATION_NAME Here ArchaeologyHouse",
+		"Actions": [
+			"RemoveMail Current MuseumSkunk2",
+			"spacechase0.SpaceCore_PlayEvent 2058316 false",
+			"MarkActionApplied Current {{ModId}}_SkunkBuffMuseum3 false",
+                    ],
+                }
+            },
+},
+	// mail tags
+{
+"Action": "EditData",
+"Target": "Data/Mail",
+"Entries":
+	{
+	"MuseumSkunk": null,
+	"MuseumSkunk1": null,
+	"MuseumSkunk2": null,
+    },
+},
+
+//end
+]
+}

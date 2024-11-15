@@ -1,0 +1,48 @@
+{
+    "Format": "2.0.0",
+    "ConfigSchema": {
+      	"Profit Margin": {
+        	"AllowValues": "high, balanced, low",
+         	"Default": "balanced",
+         	"Section": "Experience"
+                         },
+          "Skunk Buff Events": {
+        	"AllowValues": "true, false",
+         	"Default": "true",
+         	"Section": "Buffs"
+                          },
+          "Sebastian's Bong": {
+        	"AllowValues": "true, false",
+         	"Default": "true",
+         	"Section": "Visual"
+                          },
+                    },
+               
+    "Changes": [
+	{
+		"Action": "Include",
+		"FromFile": "crops/marijuana.json, crops/hemp.json, dialogue/gifts.json, recipes/crafting.json, recipes/cooking.json",
+    },
+    {
+		"Action": "Include",
+		"FromFile": "dialogue/events.json, dialogue/skunktopics.json",
+        "When": {
+	        "Skunk Buff Events": "true",
+		        },
+    },
+
+
+                // sebastian's bong
+    {
+        "Action": "EditImage",
+        "Target": "Maps/townInterior",
+        "FromFile": "assets/VaseBong.png",
+        "ToArea": { "X": 64, "Y": 672, "Width": 16, "Height": 16 },
+        "When": {
+                "Sebastian's Bong": true
+            },
+    },
+
+    ],
+
+}

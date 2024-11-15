@@ -1,0 +1,359 @@
+{
+
+    "Changes": [
+
+					// rolling paper
+
+        
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_HempRollingPaper": {
+                    "Name": "{{ModId}}_HempRollingPaper", 
+                    "Displayname": "Seda de Cânhamo",
+                    "Description": "Pronto pra bolar! Bem inútil para qualquer outra coisa.",
+                    "Type": "Objects",
+                    "Category": -16,
+                    "Price": 1,
+                    "Texture": "{{InternalAssetKey: assets/HempRollingPaper.png}}",
+            					}
+        		},
+	},
+	{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+            "Entries": { 
+		"Hemp Rolling Paper": "{{ModId}}_HempFiber 1/Home/{{ModId}}_HempRollingPaper 3/false/default" 
+			},
+        },
+
+
+	{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+    	    "When": {
+		        "Profit Margin": "balanced",
+		        },
+            "Entries": { 
+		        "Cloth": "{{ModId}}_HempFiber 10/Home/428/false/default" 
+			},
+        },
+        	{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+    	    "When": {
+		        "Profit Margin": "low",
+		        },
+            "Entries": { 
+		        "Cloth": "{{ModId}}_HempFiber 15/Home/428/false/default" 
+			},
+        },
+        	{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+    	    "When": {
+		        "Profit Margin": "high",
+		        },
+            "Entries": { 
+		        "Cloth": "{{ModId}}_HempFiber 5/Home/428/false/default" 
+			},
+        },
+
+					// preroll
+
+	{
+            "Action": "EditData",
+            "Target": "Data/Buffs",
+            "Entries": {
+                "{{ModId}}_SkunkBuff": {
+                    	"Displayname": "Fedido",
+                    	"Description": "Você tem um cheiro... diferente.",
+        		"IconTexture": "{{InternalAssetKey: assets/SkunkBuff.png}}",
+        		"IconSpriteIndex": 0,
+		        "Duration": 84000,
+		        "IsDebuff": false,
+	        	"GlowColor": null,
+        		"CustomAttributes": {},
+		        "CustomFields": null,
+            				},
+        		},
+	}, 
+
+	
+	        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "balanced, low",
+		        },            
+            "Entries": {
+                "{{ModId}}_Preroll": {
+                    	"Name": "{{ModId}}_Preroll",
+                    	"Displayname": "Baseado",
+                    	"Description": "Curte a brisa!",
+                    	"Type": "Objects",
+                    	"Category": -8,
+		   	"Edibility": 5,
+		        "Buffs": [{
+      				"Id": "Skunk",
+        			"BuffId": "{{ModId}}_SkunkBuff",
+				 },
+				 {
+      				"Id": "Stoned",
+        			"BuffId": "{{ModId}}_StonedBuff",
+				}],
+                    	"Price": 20,
+                    	"Texture": "{{InternalAssetKey: assets/Preroll.png}}",
+            				}
+        		},
+	},
+	
+	
+	
+		        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+    	    "When": {
+		        "Profit Margin": "high",
+		        },            
+            "Entries": {
+                "{{ModId}}_Preroll": {
+                    "Name": "{{ModId}}_Preroll",
+                   	"Displayname": "Baseado",
+                   	"Description": "Curte a brisa!",
+                   	"Type": "Objects",
+                   	"Category": -8,
+		   			"Edibility": 5,
+		        	"Buffs": [{
+      					"Id": "Skunk",
+        				"BuffId": "{{ModId}}_SkunkBuff",
+				 				},
+				 	{
+      					"Id": "Stoned",
+        				"BuffId": "{{ModId}}_StonedBuff",
+
+					}],
+                    	"Price": 60,
+                    	"Texture": "{{InternalAssetKey: assets/Preroll.png}}",
+            				}
+        		},
+	},
+
+	{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+    	    "When": {
+		        "Profit Margin": "high, balanced",
+		            },  
+            "Entries": { 
+		"Preroll": "{{ModId}}_HempRollingPaper 1 {{ModId}}_Bud 1/Home/{{ModId}}_Preroll 1/false/default" },
+        },
+        
+        	{
+            "Action": "EditData",
+            "Target": "Data/CraftingRecipes",
+    	    "When": {
+		        "Profit Margin": "low",
+		            },  
+            "Entries": { 
+		"Preroll": "{{ModId}}_HempRollingPaper 1 {{ModId}}_Bud 2/Home/{{ModId}}_Preroll 1/false/default" },
+        },
+				
+					// gift tastes
+
+	{
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                { 			// universal dislike
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Dislike"],
+                    "Value": "{{ModId}}_HempRollingPaper {{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sebastian", "1"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Wizard", "1"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Abigail", "3"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Caroline", "3"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", "3"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Kent", "3"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leah", "3"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+	        {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Elliott", "3"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Linus", "3"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sam", "3"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sandy", "3"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sebastian", "3"],
+                    "Value": "{{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Shane", "3"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Willy", "3"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Wizard", "3"],
+                    "Value": "{{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Dwarf", "5"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", "5"],
+                    "Value": "{{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jodi", "5"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Krobus", "5"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Pam", "5"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sam", "5"],
+                    "Value": "{{ModId}}_HempRollingPaper",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "George", "9"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Penny", "9"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jas", "9"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Vincent", "9"],
+                    "Value": "{{ModId}}_Preroll",
+                    "Delimiter": " " 
+                },
+	        {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leo", "9"],
+                    "Value": "{{ModId}}_Preroll {{ModId}}_SpecialBrownie {{ModId}}_InfusedOil",
+                    "Delimiter": " " 
+                },
+]},
+
+    ]
+}

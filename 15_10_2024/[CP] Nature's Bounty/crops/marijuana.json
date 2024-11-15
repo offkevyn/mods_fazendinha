@@ -1,0 +1,384 @@
+{
+                    
+    "Changes": [
+
+					// balanced & low - seeds
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+        "When": {
+	    "Profit Margin": "balanced, low",
+		        },
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Name": "{{ModId}}_MarijuanaSeeds", // 
+                "Displayname": "Sementes de Marijuana",
+                "Description": "Pode ser plantado em qualquer estação exceto no Inverno. Leva 7 dias para crescer e irá produzir toda semana. Produz 10 fibras por colheita.",
+                "Type": "Seeds",
+                "Category": -74,
+                "Price": 25,
+                "Texture": "{{InternalAssetKey: assets/MarijuanaSeeds.png}}",
+            					         },
+        		    },
+	},
+	{
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "Dwarf", "Items" ],
+	    "When": { 
+	        "DayofWeek": "Thursday",
+	        "Profit Margin": "balanced, low",
+	                },
+         "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Id": "{{ModId}}_MarijuanaSeeds",
+                "ItemId": "{{ModId}}_MarijuanaSeeds",
+		        "AvailableStock": 10,
+                "Price": 75,
+        		               	         }
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_MarijuanaSeeds", "ToPosition": "Top" }
+            		       ]
+    },
+	{  
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "SeedShop", "Items" ],
+        "When": {
+		    "Profit Margin": "balanced, low",
+		        },
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Id": "{{ModId}}_MarijuanaSeeds",
+                "ItemId": "{{ModId}}_MarijuanaSeeds",
+                "Price": 45,
+           	       			            },
+        		   },
+            "MoveEntries": [
+                { "ID": "{{ModId}}_MarijuanaSeeds", "ToPosition": "Top" }
+            		       ]
+        },
+	{
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "Sandy", "Items" ],
+        	"When": {
+		        "Profit Margin": "balanced, low",
+		            },
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Id": "{{ModId}}_MarijuanaSeeds",
+                "ItemId": "{{ModId}}_MarijuanaSeeds",
+                "Price": 75,
+           	       			    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_MarijuanaSeeds", "ToPosition": "Top" }
+            		   ]
+    },
+        				// balanced - crop
+
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+    	"When": {
+		    "Profit Margin": "balanced",
+		        },
+        "Entries": {
+            "{{ModId}}_Bud": {
+                "Name": "{{ModId}}_Bud", // 
+                "Displayname": "Broto",
+                "Description": "Uma planta popular com um cheiro distinto.",
+                "Type": "Objects",
+                "Category": -80,
+                "Price": 15,
+                "Texture": "{{InternalAssetKey: assets/Bud.png}}",
+            			}
+        		},
+	},
+    {
+        "Action": "EditData",
+        "Target": "Data/Crops",
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Seasons": [ "spring", "summer", "fall" ],
+                "DaysInPhase": [ 1, 1, 1, 2, 2 ],
+		    "RegrowDays": 7,
+                "HarvestItemId": "{{ModId}}_Bud",
+                "HarvestMinStack": 10,
+                "HarvestMaxStack": 10,
+                "Texture": "{{InternalAssetKey: assets/Marijuana.png}}",
+            				},
+        		},
+	},
+	
+        				// low - crop
+
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+    	"When": {
+		    "Profit Margin": "low",
+		        },
+        "Entries": {
+            "{{ModId}}_Bud": {
+                "Name": "{{ModId}}_Bud", // 
+                "Displayname": "Broto",
+                "Description": "Uma planta popular com um cheiro distinto.",
+                "Type": "Objects",
+                "Category": -80,
+                "Price": 10,
+                "Texture": "{{InternalAssetKey: assets/Bud.png}}",
+            			}
+        		},
+	},
+       
+
+					// high - seeds
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+        "When": {
+	    "Profit Margin": "high",
+		        },
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Name": "{{ModId}}_MarijuanaSeeds", // 
+                "Displayname": "Sementes de Marijuana",
+                "Description": "Pode ser plantado em qualquer estação exceto no Inverno. Leva 7 dias para crescer e irá produzir toda semana. Produz 10 fibras por colheita.",
+                "Type": "Seeds",
+                "Category": -74,
+                "Price": 75,
+                "Texture": "{{InternalAssetKey: assets/MarijuanaSeeds.png}}",
+            					         },
+        		    },
+	},
+	{
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "Dwarf", "Items" ],
+	    "When": { 
+	        "DayofWeek": "Thursday", 
+	        "Profit Margin": "high",
+	                },
+         "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Id": "{{ModId}}_MarijuanaSeeds",
+                "ItemId": "{{ModId}}_MarijuanaSeeds",
+		        "AvailableStock": 10,
+                "Price": 150,
+        		               	         }
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_MarijuanaSeeds", "ToPosition": "Top" }
+            		       ]
+    },
+	{  
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "SeedShop", "Items" ],
+        "When": {
+		    "Profit Margin": "high",
+		        },
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Id": "{{ModId}}_MarijuanaSeeds",
+                "ItemId": "{{ModId}}_MarijuanaSeeds",
+                "Price": 85,
+           	       			            },
+        		   },
+            "MoveEntries": [
+                { "ID": "{{ModId}}_MarijuanaSeeds", "ToPosition": "Top" }
+            		       ]
+        },
+	{
+        "Action": "EditData",
+        "Target": "Data/Shops",
+        "TargetField": [ "Sandy", "Items" ],
+        	"When": {
+		        "Profit Margin": "high",
+		            },
+        "Entries": {
+            "{{ModId}}_MarijuanaSeeds": {
+                "Id": "{{ModId}}_MarijuanaSeeds",
+                "ItemId": "{{ModId}}_MarijuanaSeeds",
+                "Price": 150,
+           	       			    },
+        		},
+            "MoveEntries": [
+                { "ID": "{{ModId}}_MarijuanaSeeds", "ToPosition": "Top" }
+            		   ]
+    },
+        				// high - crop
+
+    {
+        "Action": "EditData",
+        "Target": "Data/Objects",
+    	"When": {
+		    "Profit Margin": "high",
+		        },
+        "Entries": {
+            "{{ModId}}_Bud": {
+                "Name": "{{ModId}}_Bud", // 
+                "Displayname": "Broto",
+                "Description": "Uma planta popular com um cheiro distinto.",
+                "Type": "Objects",
+                "Category": -80,
+                "Price": 50,
+                "Texture": "{{InternalAssetKey: assets/Bud.png}}",
+            			     }
+        		    },
+	},
+
+
+					// gift tastes
+
+	{
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                { 			// universal dislike
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Dislike"],
+                    "Value": "{{ModId}}_MarijuanaSeeds {{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+                
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Caroline", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Emily", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leah", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Linus", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sebastian", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Shane", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Wizard", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Willy", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Abigail", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Dwarf", "5"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Kent", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Krobus", "5"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sam", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Sandy", "3"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "George", "9"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Penny", "9"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Jas", "9"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Vincent", "9"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leo", "9"],
+                    "Value": "{{ModId}}_Bud",
+                    "Delimiter": " " 
+                },
+
+]},
+
+    ]
+}
